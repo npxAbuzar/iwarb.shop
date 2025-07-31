@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cyber Security Awareness</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding-top: 100px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3.5em;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      animation: neon-glow 1.5s infinite alternate;
+    }
+
+    p {
+      font-size: 1.4em;
+      margin-top: 20px;
+      color: #d1ecf1;
+    }
+
+    .floating-shield {
+      width: 120px;
+      height: 120px;
+      margin: 50px auto;
+      background: url('https://cdn-icons-png.flaticon.com/512/3064/3064197.png') no-repeat center;
+      background-size: contain;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes neon-glow {
+      from {
+        text-shadow: 0 0 10px #00ffff;
+      }
+      to {
+        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="floating-shield"></div>
+    <h1>Protect Your Digital World</h1>
+    <p>Cybersecurity is not a choice — it's a responsibility.<br>Secure your passwords, devices, and online identity.</p>
+  </div>
+
+  <footer>
+    &copy; 2025 | NPxBh41 - Ethical Hacker
+  </footer>
+</body>
+</html>
