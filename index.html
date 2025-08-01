@@ -2,92 +2,142 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Cyber Security Awareness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cyber Tools</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  
   <style>
+    
     body {
       margin: 0;
+      background-color: #0f0f0f;
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+    }
+
+    .tools-section {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .tools-section h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #1e1e1e, #292929);
+      border: 2px solid #333;
+      border-radius: 20px;
+      width: 280px;
+      padding: 20px;
+      text-align: left;
+      transition: all 0.3s ease-in-out;
+      text-decoration: none;
       color: #fff;
-      overflow: hidden;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
     }
 
-    .container {
-      text-align: center;
-      padding-top: 100px;
-      animation: fadeIn 2s ease-in-out;
+    .card:hover {
+      transform: scale(1.05) rotate3d(1, 1, 0, 10deg);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      background: linear-gradient(145deg, #1b1b1b, #2c2c2c);
     }
 
-    h1 {
-      font-size: 3.5em;
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.3rem;
       color: #00ffff;
-      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
-      animation: neon-glow 1.5s infinite alternate;
     }
 
-    p {
-      font-size: 1.4em;
-      margin-top: 20px;
-      color: #d1ecf1;
-    }
-
-    .floating-shield {
-      width: 120px;
-      height: 120px;
-      margin: 50px auto;
-      background: url('https://cdn-icons-png.flaticon.com/512/3064/3064197.png') no-repeat center;
-      background-size: contain;
-      animation: float 3s ease-in-out infinite;
-    }
-
-    @keyframes neon-glow {
-      from {
-        text-shadow: 0 0 10px #00ffff;
-      }
-      to {
-        text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
-      }
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes float {
-      0%, 100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-15px);
-      }
-    }
-
-    footer {
-      position: absolute;
-      bottom: 20px;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9em;
+    .card p {
+      margin: 10px 0 0;
+      font-size: 0.95rem;
       color: #ccc;
     }
+    .card:hover {
+  cursor: pointer;
+    }
+
+      body {
+        font-family: 'Fira Code', monospace;
+        cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym31.ani'), auto;
+        scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00ffcc;
+        border-radius: 10px;
+      }
+      .category-box {
+        transition: transform 0.3s ease;
+      }
+      .category-box:hover {
+        transform: scale(1.02);
+      }
+   .iframe-box {
+  margin-top: 20px;
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+}
+
+.iframe-box iframe {
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
+  transform: rotateX(5deg) rotateY(3deg);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.iframe-box iframe:hover {
+  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.651);
+}
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="floating-shield"></div>
-    <h1>Protect Your Digital World</h1>
-    <p>Cybersecurity is not a choice — it's a responsibility.<br>Secure your passwords, devices, and online identity.</p>
-  </div>
+  <div class="tools-section">
+    <h2>🚀 My Cybersecurity Tools & Profile</h2>
+    <div class="card-container">
+      <a href="https://github.com/npxAbuzar/np-MultiTool.git" target="_blank" class="card">
+        <h3>NP-MultiTool 🔧</h3>
+        <p>Powerful all-in-one hacking tool for Linux & Termux.</p>
+      </a>
 
-  <footer>
-    &copy; 2025 | NPxBh41 - Ethical Hacker
-  </footer>
+      <a href="https://github.com/npxAbuzar/np-IpTracerX.git" target="_blank" class="card">
+        <h3>NP-IpTracerX 🌍</h3>
+        <p>Track IPs with precision and gather OSINT data fast.</p>
+      </a>
+
+      <a href="https://tryhackme.com/p/NPxAbuz4R" target="_blank" class="card">
+        <h3>TryHackMe Profile 🔐</h3>
+        <p>Follow my journey as I conquer CTFs and challenges.</p>
+      </a>
+     <div class="iframe-box">
+  <iframe 
+    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4732891"
+    width="300"
+    height="200"
+    style="border:none;">
+  </iframe>
+</div>
+
+
+    </div>
+  </div>
 </body>
 </html>
+
