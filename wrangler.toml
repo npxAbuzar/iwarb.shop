@@ -1,0 +1,16 @@
+name = "iwarb-shop"
+type = "javascript"
+
+[site]
+bucket = "./dist"  # or ./public or your folder
+
+[build]
+command = "npm run build"  # only if you use build tools
+
+[[headers]]
+for = "/*"
+[headers.values]
+X-Content-Type-Options = "nosniff"
+X-Frame-Options = "DENY"
+Referrer-Policy = "no-referrer"
+Content-Security-Policy = "default-src 'self'"
