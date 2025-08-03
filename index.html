@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<head>
-  <head>
+     <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>NPxAbuzar - Cyber Tools & CTF Projects</title>
@@ -25,184 +24,207 @@
   <meta name="twitter:title" content="NPxAbuzar - Cyber Tools">
   <meta name="twitter:description" content="CTF challenges, tools & projects for hackers and learners.">
   <meta name="twitter:image" content="https://iwarb.shop/android-chrome-512x512.png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>NPxBhai | Cyber Ninja</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Fira+Code&display=swap" rel="stylesheet" />
 
-  <!-- iOS App Meta -->
-  <meta name="apple-mobile-web-app-title" content="NPxAbuzar">
+  <!-- GSAP + VANTA + THREE -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Theme Colors -->
-  <meta name="theme-color" content="#000000">
-  <meta name="msapplication-TileColor" content="#000000">
-</head>
-
-  <meta charset="UTF-8">
-  <title>NPxAbuzar - Tools & CTFs</title>
-
-  <!-- Favicons for All Platforms -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-  <!-- Android Specific Icons -->
-  <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
-
-  <!-- Optional Theme Color -->
-  <meta name="theme-color" content="#000000">
-  <meta name="msapplication-TileColor" content="#000000">
-
-  <!-- Your other links or CSS files -->
-  <link rel="stylesheet" href="style.css">
-</head>
-
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Cyber Tools</title>
-  <link rel="icon" type="image/png" href="/favicon.png">
-  
   <style>
-    
-    body {
+    html, body {
       margin: 0;
-      background-color: #0f0f0f;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: 'Fira Code', monospace;
+      overflow-x: hidden;
       color: white;
+      scroll-behavior: smooth;
+    }
+
+    #vanta-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     .tools-section {
+      position: relative;
+      padding: 80px 20px;
       text-align: center;
-      padding: 50px 20px;
     }
 
     .tools-section h2 {
-      font-size: 2rem;
-      margin-bottom: 30px;
+      font-size: 2.5rem;
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff88;
+      margin-bottom: 40px;
     }
 
     .card-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 25px;
+      gap: 30px;
     }
 
     .card {
-      background: linear-gradient(145deg, #1e1e1e, #292929);
-      border: 2px solid #333;
-      border-radius: 20px;
-      width: 280px;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid #00ffff44;
+      border-radius: 15px;
       padding: 20px;
-      text-align: left;
-      transition: all 0.3s ease-in-out;
-      text-decoration: none;
+      width: 280px;
       color: #fff;
-      box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+      text-align: left;
+      text-decoration: none;
+      transition: box-shadow 0.4s;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
     }
 
     .card:hover {
-      transform: scale(1.05) rotate3d(1, 1, 0, 10deg);
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
-      background: linear-gradient(145deg, #1b1b1b, #2c2c2c);
+      cursor: pointer;
     }
 
     .card h3 {
-      margin-top: 0;
-      font-size: 1.3rem;
       color: #00ffff;
+      font-size: 1.4rem;
+      margin: 0 0 10px;
     }
 
     .card p {
-      margin: 10px 0 0;
-      font-size: 0.95rem;
       color: #ccc;
-    }
-    .card:hover {
-  cursor: pointer;
+      font-size: 0.95rem;
     }
 
-      body {
-        font-family: 'Fira Code', monospace;
-        cursor: url('https://cur.cursors-4u.net/symbols/sym-1/sym31.ani'), auto;
-        scroll-behavior: smooth;
-      }
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #1a1a1a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #00ffcc;
-        border-radius: 10px;
-      }
-      .category-box {
-        transition: transform 0.3s ease;
-      }
-      .category-box:hover {
-        transform: scale(1.02);
-      }
-   .iframe-box {
-  margin-top: 20px;
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-}
+    .iframe-box {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+      perspective: 1000px;
+    }
 
-.iframe-box iframe {
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.3);
-  transform: rotateX(5deg) rotateY(3deg);
-  transition: transform 0.6s ease, box-shadow 0.6s ease;
-}
+    .iframe-box iframe {
+      border: none;
+      border-radius: 15px;
+      transform: rotateX(5deg) rotateY(3deg);
+      transition: transform 0.6s, box-shadow 0.6s;
+      box-shadow: 0 10px 25px rgba(0, 255, 255, 0.3);
+    }
 
-.iframe-box iframe:hover {
-  transform: rotateX(0deg) rotateY(0deg) scale(1.05);
-  box-shadow: 0 20px 40px rgba(0, 255, 255, 0.651);
-}
+    .iframe-box iframe:hover {
+      transform: rotateX(0deg) rotateY(0deg) scale(1.05);
+      box-shadow: 0 20px 40px rgba(0, 255, 255, 0.6);
+    }
 
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1a1a1a;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #00ffff;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
+  <div id="vanta-bg"></div>
+
   <div class="tools-section">
-    <h2>🚀 My Cybersecurity Tools & Profile</h2>
+    <h2 class="main-title">🚀 NPxAbuz4R | Cybersecurity Tools & Profile</h2>
     <div class="card-container">
       <a href="https://github.com/npxAbuzar/np-MultiTool.git" target="_blank" class="card">
         <h3>NP-MultiTool 🔧</h3>
         <p>Powerful all-in-one hacking tool for Linux & Termux.</p>
       </a>
-
       <a href="https://github.com/npxAbuzar/np-IpTracerX.git" target="_blank" class="card">
         <h3>NP-IpTracerX 🌍</h3>
         <p>Track IPs with precision and gather OSINT data fast.</p>
       </a>
-
       <a href="https://tryhackme.com/p/NPxAbuz4R" target="_blank" class="card">
         <h3>TryHackMe Profile 🔐</h3>
         <p>Follow my journey as I conquer CTFs and challenges.</p>
       </a>
-     <div class="iframe-box">
-  <iframe 
-    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4732891"
-    width="300"
-    height="200"
-    style="border:none;">
-  </iframe>
-</div>
+    </div>
 
-
+    <div class="iframe-box">
+      <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4732891" width="300" height="200"></iframe>
     </div>
   </div>
+
+  <!-- VANTA Background Init -->
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x00ffff,
+      backgroundColor: 0x0f0f0f,
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 15.0
+    });
+  </script>
+
+  <!-- GSAP Animation -->
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      const title = document.querySelector(".main-title");
+      const cards = document.querySelectorAll(".card");
+      const iframe = document.querySelector(".iframe-box iframe");
+
+      gsap.from(title, {
+        duration: 1,
+        y: -60,
+        opacity: 0,
+        ease: "power3.out"
+      });
+
+      gsap.from(cards, {
+        duration: 1,
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+
+      gsap.from(iframe, {
+        duration: 1.2,
+        y: 60,
+        opacity: 0,
+        delay: 0.5,
+        ease: "power2.out"
+      });
+
+      // Hover effect for each card
+      cards.forEach(card => {
+        card.addEventListener("mouseenter", () => {
+          gsap.to(card, { scale: 1.05, duration: 0.3, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", () => {
+          gsap.to(card, { scale: 1, duration: 0.3, ease: "power2.out" });
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+
 
